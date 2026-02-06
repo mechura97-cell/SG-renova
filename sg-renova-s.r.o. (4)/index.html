@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="cs" class="scroll-smooth">
   <head>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SG RENOVA s.r.o. - Moderní rekonstrukce</title>
@@ -35,5 +36,16 @@
   <body class="bg-[#fafafa] text-zinc-900 overflow-x-hidden">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
-</body>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+  </body>
 </html>
