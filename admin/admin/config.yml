@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images"
+public_folder: "/images"
+collections:
+  - name: "stranky"
+    label: "Stránky"
+    files:
+      - file: "index.html"
+        label: "Hlavní strana"
+        name: "index"
+        fields:
+          - { label: "Titulek", name: "title", widget: "string" }
+          - { label: "Hlavní text", name: "body", widget: "markdown" }
