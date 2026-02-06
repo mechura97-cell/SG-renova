@@ -1,0 +1,8 @@
+
+{
+  "name": "SG RENOVA s.r.o.",
+  "description": "Prémiové rekonstrukce bytů a domů pod vedením bratrů Grůzových. Tradice, zkušenosti z Francie a moderní technologie.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
